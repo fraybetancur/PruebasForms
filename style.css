@@ -1,0 +1,100 @@
+body {
+  background-color: rgb(144, 250, 232);
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.title {
+  font-family: "Lobster", cursive;
+  font-size: 3rem;
+  color: rgb(1, 99, 99);
+  margin-bottom: 1rem;
+}
+
+.description {
+  margin: 0 0 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 1rem 0;
+}
+.field-label {
+  flex-basis: 50%;
+  text-align: left;
+}
+.field-label:after {
+  content: ":";
+}
+.field.required .field-label:before {
+  content: "*";
+  margin-right: 0.25rem;
+  color: red;
+}
+.field-input {
+  flex-basis: 100%;
+  margin-top: 0.5rem;
+}
+.field-items {
+  display: flex;
+  flex-direction: column;
+}
+.field-items input[type="radio"],
+.field-items input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+.input-text {
+  border: 1px solid grey;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  width: calc(100% - 1rem);
+}
+.select {
+  font-size: 1rem;
+  border: 1px solid grey;
+}
+.button {
+  background-color: teal;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+@media (min-width: 600px) {
+  .field {
+    flex-direction: row;
+  }
+  .field-label {
+    text-align: right;
+  }
+  .field-input {
+    margin-top: 0;
+    margin-left: 1rem;
+    flex-basis: 50%;
+  }
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer p {
+  font-size: 1rem;
+}
