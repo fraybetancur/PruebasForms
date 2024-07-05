@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Survey Form</title>
+    <link href="./style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lobster|Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <h1 class="title" id="title">Survey Form</h1>
+      <p class="description" id="description">
+        Let us know how we can improve our page
+      </p>
+      <form class="form" id="survey-form">
+        <div class="field required">
+          <label class="field-label" for="name" id="name-label">Name</label>
+          <div class="field-input">
+            <input
+              class="input-text"
+              name="name"
+              id="name"
+              type="text"
+              placeholder="Name"
+              required
+            />
+          </div>
+        </div>
+        <div class="field required">
+          <label class="field-label" for="email" id="email-label">Email</label>
+          <div class="field-input">
+            <input
+              class="input-text"
+              name="email"
+              id="email"
+              type="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+        </div>
+        <div class="field required">
+          <label class="field-label" for="number" id="number-label">Age</label>
+          <div class="field-input">
+            <input
+              class="input-text"
+              name="age"
+              id="number"
+              type="number"
+              placeholder="Age"
+              min="1"
+              max="99"
+              required
+            />
+          </div>
+        </div>
+        <div class="field">
+          <label class="field-label">Which option describes you?</label>
+          <div class="field-input">
+            <select class="select" id="dropdown">
+              <option hidden disabled selected>Select an option</option>
+              <option value="student">Student</option>
+              <option value="job">Full Time Job</option>
+              <option value="lerner">Full Time Lerner</option>
+              <option value="preferNo">Prefer no to say</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="field required">
+          <label class="field-label"
+            >Would you recomend our site to a friend?</label
+          >
+          <div class="field-input field-items">
+            <label>
+              <input name="radio-buttons" value="1" type="radio" />Yes
+            </label>
+            <label>
+              <input name="radio-buttons" value="2" type="radio" />Maybe
+            </label>
+            <label>
+              <input name="radio-buttons" value="3" type="radio" />No
+            </label>
+            <label>
+              <input name="radio-buttons" value="4" type="radio" />I have no
+              friends
+            </label>
+          </div>
+        </div>
+        <div class="field">
+          <label class="field-label"
+            >Things that we should improve
+            <br />
+            (check all that apply)
+          </label>
+          <div class="field-input field-items">
+            <label>
+              <input name="checkboxes" value="menu" type="checkbox" />Menu
+            </label>
+            <label>
+              <input name="checkboxes" value="design" type="checkbox" />Design
+            </label>
+            <label>
+              <input name="checkboxes" value="colors" type="checkbox" />Colors
+            </label>
+            <label>
+              <input
+                name="checkboxes"
+                value="contact-page"
+                type="checkbox"
+              />Contact Page
+            </label>
+          </div>
+        </div>
+        <div class="field">
+          <label class="field-label" id="comments">Comments</label>
+          <!-- <div class="field-input"> -->
+          <textarea
+            class="field-input input-text"
+            name="comments"
+            type="text"
+            placeholder="Your Comments"
+          ></textarea>
+          <!-- </div> -->
+        </div>
+        <div class="field">
+          <div></div>
+          <div class="field-input">
+            <button class="button" type="submit" id="submit">Send</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <footer class="footer">
+      <p>Copyright chikz 2019</p>
+    </footer>
+
+    <script type="text/javascript">
+      function onSubmit(event) {
+        event.preventDefault();
+
+        console.log(event.target);
+      }
+
+      const form = document.getElementById("survey-form");
+      form.addEventListener("submit", onSubmit);
+    </script>
+
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+  </body>
+</html>
+
+<!--
+User Story #16: Inside the form element, I am presented with a button with id="submit" to submit all my inputs.
+You can build your project by forking this CodePen pen. Or you can use this CDN link to run the tests in any environment you like: https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js
+-->
